@@ -5,6 +5,14 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RasperryServiceHost", "RasperryServiceHost\RasperryServiceHost.csproj", "{454F4086-9408-4A3E-8113-78AB7348E36F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RasperryContracts", "RasperryContracts\RasperryContracts.csproj", "{5AD9A038-9D61-4862-B91A-54BF0573362F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cucumber.Imp", "Cucumber.Imp", "{430C1BD3-5BE5-46E7-86B1-5E82E3FA58A5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cucumber.Test", "Cucumber.Test", "{84E78CF3-0BDE-4C10-B137-406673B5EFEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RasperryServiceHost.Test", "RasperryServiceHost.Test\RasperryServiceHost.Test.csproj", "{5071C752-DABF-41CF-94AA-1000652D17D3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,8 +23,21 @@ Global
 		{454F4086-9408-4A3E-8113-78AB7348E36F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{454F4086-9408-4A3E-8113-78AB7348E36F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{454F4086-9408-4A3E-8113-78AB7348E36F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AD9A038-9D61-4862-B91A-54BF0573362F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AD9A038-9D61-4862-B91A-54BF0573362F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AD9A038-9D61-4862-B91A-54BF0573362F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AD9A038-9D61-4862-B91A-54BF0573362F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5071C752-DABF-41CF-94AA-1000652D17D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5071C752-DABF-41CF-94AA-1000652D17D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5071C752-DABF-41CF-94AA-1000652D17D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5071C752-DABF-41CF-94AA-1000652D17D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{454F4086-9408-4A3E-8113-78AB7348E36F} = {430C1BD3-5BE5-46E7-86B1-5E82E3FA58A5}
+		{5AD9A038-9D61-4862-B91A-54BF0573362F} = {430C1BD3-5BE5-46E7-86B1-5E82E3FA58A5}
+		{5071C752-DABF-41CF-94AA-1000652D17D3} = {84E78CF3-0BDE-4C10-B137-406673B5EFEA}
 	EndGlobalSection
 EndGlobal

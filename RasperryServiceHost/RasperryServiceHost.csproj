@@ -7,7 +7,7 @@
     <ProjectGuid>{454F4086-9408-4A3E-8113-78AB7348E36F}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RasperryServiceHost</RootNamespace>
+    <RootNamespace>Ufuk.RasperryServiceHost</RootNamespace>
     <AssemblyName>RasperryServiceHost</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -61,7 +61,6 @@
   <ItemGroup>
     <Compile Include="ServiceHelper\ServiceHelper.cs" />
     <Compile Include="Services\RasperryService.cs" />
-    <Compile Include="Services\_Interface\IRasperryService.cs" />
     <Compile Include="Options.cs" />
     <Compile Include="_Interfaces\IOptions.cs" />
     <Compile Include="Log.cs" />
@@ -76,6 +75,15 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RasperryContracts\RasperryContracts.csproj">
+      <Project>{5ad9a038-9d61-4862-b91a-54bf0573362f}</Project>
+      <Name>RasperryContracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\_Interface\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

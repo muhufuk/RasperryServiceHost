@@ -1,9 +1,9 @@
 ﻿using System.ServiceModel;
 
-namespace RasperryServiceHost
+namespace Ufuk.RasperryContracts
 {
     [ServiceContract]
-    interface IRasperryService
+    public interface IRasperryService
     {
         [OperationContract]
         

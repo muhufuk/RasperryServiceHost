@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Net;
 using System.ServiceModel;
+using Ufuk.RasperryContracts;
 
 namespace RasperryServiceHost
 {
@@ -23,7 +24,7 @@ namespace RasperryServiceHost
             try
             {
                 m_ServiceHost.Open();
-                m_Log.Info($"Host is opened and listening {BuidEndPointUri()}:");  // todo:
+                m_Log.Info($"Host is opened and listening {BuidEndPointUri()}:");
             }
             catch (CommunicationObjectFaultedException)
             {
@@ -58,6 +59,7 @@ namespace RasperryServiceHost
 
         public void Dispose()
         {
+            m_ServiceHost?.Close();
         }
     }
 }
