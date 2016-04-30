@@ -5,7 +5,7 @@ namespace Ufuk.RasperryContracts
     [ServiceContract]
     public interface IRasperryService
     {
-        [OperationContract]
+        [OperationContract(Action ="rasperry.ufuk.dummyMethod")]
         
         void DummyMethod();
     }

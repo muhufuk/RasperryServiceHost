@@ -4,7 +4,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProjectGuid>7048e275-821e-42c1-918d-c209795f7408</ProjectGuid>
+    <ProjectGuid>{7048E275-821E-42C1-918D-C209795F7408}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>RasperryClient.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
@@ -62,6 +62,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Internals" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
@@ -138,6 +140,16 @@
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Rasperry.Common\Rasperry.Common.csproj">
+      <Project>{e5f4d40d-059e-46db-a083-8731e485d74d}</Project>
+      <Name>Rasperry.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\RasperryContracts\RasperryContracts.csproj">
+      <Project>{5ad9a038-9d61-4862-b91a-54bf0573362f}</Project>
+      <Name>RasperryContracts</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="..\RasperryClient\RasperryClient.projitems" Label="Shared" Condition="Exists('..\RasperryClient\RasperryClient.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

@@ -1,5 +1,3 @@
-using System;
-using System.Net;
 using System.ServiceModel;
 using System.ServiceModel.Channels;
 using Ufuk.RasperryContracts;

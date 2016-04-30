@@ -56,14 +56,26 @@ namespace RasperryServiceHost
 
         private Uri BuidEndPointUri()
         {
-            return  new UriBuilder(Uri.UriSchemeHttp, IPAddress.Loopback.ToString(), m_Options.PortNumber).Uri;
+            return  new UriBuilder(Uri.UriSchemeHttp, "localhost", m_Options.PortNumber,"wcf").Uri;
         }
 
         private Binding GetBinding(string bindingName)
-        {
-            var binding = Activator.CreateInstance(typeof(Binding), bindingName);
+        {                                    
+            return StringToBinding(bindingName);
+        }
 
-            return (Binding)binding;
+        private Binding StringToBinding(string bindingName)
+        {
+            switch (bindingName)
+            {
+                case "BasicHttpBinding":
+                    return new BasicHttpBinding();
+                case "NetTcpBinding":
+                    return new NetTcpBinding();
+                default:
+                    Console.WriteLine("Invalid Binding Type");
+                    return null;
+            }
         }
 
         public void Dispose()
