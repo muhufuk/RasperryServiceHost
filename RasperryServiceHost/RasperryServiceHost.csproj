@@ -61,8 +61,6 @@
   <ItemGroup>
     <Compile Include="ServiceHelper\ServiceHelper.cs" />
     <Compile Include="Services\RasperryService.cs" />
-    <Compile Include="Options.cs" />
-    <Compile Include="_Interfaces\IOptions.cs" />
     <Compile Include="Log.cs" />
     <Compile Include="_Interfaces\ILog.cs" />
     <Compile Include="_Interfaces\IRasperryServiceHostManager.cs" />
@@ -77,6 +75,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Rasperry.Common\Rasperry.Common.csproj">
+      <Project>{e5f4d40d-059e-46db-a083-8731e485d74d}</Project>
+      <Name>Rasperry.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RasperryContracts\RasperryContracts.csproj">
       <Project>{5ad9a038-9d61-4862-b91a-54bf0573362f}</Project>
       <Name>RasperryContracts</Name>

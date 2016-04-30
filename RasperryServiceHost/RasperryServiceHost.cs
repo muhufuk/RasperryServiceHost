@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Net;
 using System.ServiceModel;
+using System.ServiceModel.Channels;
+using Ufuk.Rasperry.Common;
 using Ufuk.RasperryContracts;
 
 namespace RasperryServiceHost
@@ -49,12 +51,19 @@ namespace RasperryServiceHost
 
         private void AddEndpointToServiceHost<T>() where T : class
         {
-            m_ServiceHost.AddServiceEndpoint(typeof(T), m_Options.BindingType, BuidEndPointUri());
+            m_ServiceHost.AddServiceEndpoint(typeof(T), GetBinding(m_Options.BindingType), BuidEndPointUri());
         }
 
         private Uri BuidEndPointUri()
         {
             return  new UriBuilder(Uri.UriSchemeHttp, IPAddress.Loopback.ToString(), m_Options.PortNumber).Uri;
+        }
+
+        private Binding GetBinding(string bindingName)
+        {
+            var binding = Activator.CreateInstance(typeof(Binding), bindingName);
+
+            return (Binding)binding;
         }
 
         public void Dispose()

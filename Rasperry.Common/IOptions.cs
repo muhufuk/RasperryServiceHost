@@ -1,11 +1,13 @@
 ﻿using System.ServiceModel.Channels;
 
-namespace RasperryServiceHost
+namespace Ufuk.Rasperry.Common
 {
     public interface IOptions
     {
-        Binding BindingType { get; }
+        string BindingType { get; }
 
         int PortNumber { get; }
+
+        string UriScheme { get; }
     }
 }
